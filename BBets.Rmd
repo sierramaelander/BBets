@@ -52,17 +52,15 @@ for (i in 1:100) { bank[i] = BrLw(35, 2, 637)
 }
 print(mean(bank))
 hist(bank)
-```
-On average profit is about equal to 280$
-
-
-```{r}
 varbank=var(bank)
 lci = mean(bank)-sqrt(var(bank))*1.96
-uci = mean(bank)-sqrt(var(bank))*1.96
+uci = mean(bank)+sqrt(var(bank))*1.96
 print(lci) 
 print(uci)
 ```
+
+
+On average profit is about equal to 280$
 
 
 
@@ -73,7 +71,20 @@ print(uci)
 
 
 
+```{r}
+bank =vector('numeric')
+for (i in 1:100) { bank[i] = BrLw(35, 4.4, 637)
+}
+print(mean(bank))
+hist(bank)
+varbank=var(bank)
+lci = mean(bank)-sqrt(var(bank))*1.96
+uci = mean(bank)+sqrt(var(bank))*1.96
+print(lci) 
+print(uci)
+```
 
+The amount of money to make the bet even would be 4 dollars and 40 cents.
 
 
 
@@ -86,8 +97,22 @@ print(uci)
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+bank =vector('numeric')
+for (i in 1:100) { bank[i] = BrLw(29, 2, 637)
+}
+print(mean(bank))
+hist(bank)
+varbank=var(bank)
+lci = mean(bank)-sqrt(var(bank))*1.96
+uci = mean(bank)+sqrt(var(bank))*1.96
+print(lci) 
+print(uci)
+```
 
 
+
+The size of class to make the bet most fair would be 28.
 
 
 
@@ -96,4 +121,8 @@ print(uci)
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+The size of class to make the bet most fair would be 28.  
+The amount of money to make the bet even would be 4 dollars and 40 cents.  
+
+
 
